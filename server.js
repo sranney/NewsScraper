@@ -22,7 +22,7 @@ app.engine("handlebars",
 app.set("view engine","handlebars");//set the express view engine as handlebars
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useMongoClient: true
 });
 
