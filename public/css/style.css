@@ -1,0 +1,19 @@
+nav{
+	 overflow:hidden;
+}
+
+#home,#menu{
+	margin-left:15px;
+}
+.card{
+	padding:0px 15px 15px 15px;
+	width:max-width;
+}
+
+#toast{
+	display:none;
+}
+#brand{
+	margin-top:0px;
+	font-size:30px;
+}

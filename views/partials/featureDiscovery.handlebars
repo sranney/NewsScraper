@@ -1,0 +1,15 @@
+<a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="fa fa-question"></i></a>
+
+<!-- Tap Target Structure -->
+<div class="tap-target light-blue lighten-2" data-activates="menu">
+<div class="tap-target-content">
+  <h5>Comments</h5>
+  <p>Click on Form to read and leave comments on articles</p>
+</div>
+</div>
+
+<script type="text/javascript">
+  $("#menu").on("click",function(){
+  	$('.tap-target').tapTarget('open');
+  })
+</script>

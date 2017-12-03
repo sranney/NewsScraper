@@ -1,0 +1,45 @@
+<div class="row">
+<ul class="col s12 collapsible popout" data-collapsible="accordion">
+
+{{#each results}}
+  	<li>
+  	<div style="display:block;" class="collapsible-header card blue-grey darken-1">
+    	<div class="card-content white-text">
+      		<a href="{{this.storyline_href}}" class="card-title blue-text text-lighten-5" target="_blank">{{this.storyline}}</a>
+      		<a href="{{this.storyline_href}}" target="_blank">{{this.storyline_href}}</a>
+      		<p>Posted by {{this.user}} - {{this.date}}</p>
+    	</div>
+	    <div class="card-action center-align">
+      		<button class="Comments btn orange darken-3 white-text" artNum="{{this._id}}">Click Anywhere on This Form to Get Comments</a>
+    	</div>
+	</div>
+	<div class="collapsible-body">
+		<ul class="collection">
+			{{#each notes}}
+				<li class="collection-item avatar">
+				  <span class="title left"><strong><em>{{this.user}}</em></strong></span><br>
+				  <p class="left">{{this.body}}</p>
+				  <a href="#!" class="secondary-content blue-grey-text text-darken-1">{{this.date}}</a>
+				</li>
+			{{/each}}
+			<li class="collection-item">
+				<form class="white" action="/hn/{{this._id}}/createComment" method="post">
+					<h5>Comment Form</h5>
+			        <div class="input-field">
+			          <input type="text" id="user" name="user">
+			          <label for="user">Enter Name</label>
+			        </div>
+			        <div class="input-field">
+			          <textarea id="body" class="materialize-textarea" name="body"></textarea>
+			          <label for="body">Textarea</label>
+			        </div>			        				
+					<button class="btn orange darken-3 white-text">Submit Comment</button>
+				</form>	
+			</li>
+		</ul>
+	</div>
+	</li>
+{{/each}}
+</ul>
+</div>
+

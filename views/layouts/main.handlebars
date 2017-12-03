@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tech Central</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://use.fontawesome.com/1630df012a.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	{{#if notHome}}<link rel="stylesheet" type="text/css" href="/css/article_style.css">{{/if}}
+</head>
+<body class="light-blue lighten-5">
+{{>navbar}}
+{{#if source}}
+	<div class="container center-align">
+		{{{body}}}
+	</div>
+{{else}}
+	<div class='card orange lighten-5'>
+		<div class='card-content orange-text'>
+			<p>Invalid Source</p>
+		</div>
+	</div>
+{{/if}}
+
+{{#if home}}
+<script type="text/javascript" src="/js/home_functional.js"></script>
+{{/if}}
+{{#if notHome}}
+<script type="text/javascript" src="/js/articles_functional.js"></script>
+{{/if}}
+</body>
+</html>
